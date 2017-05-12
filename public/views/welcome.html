@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<title>MAVERICK</title>
+
+<head>
+    <link rel="shortcut icon" href="C:\Users\Jaideep Singh\Desktop\chatbot\public\views\favicon.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="/images/specialicon.ico" type="image/x-icon" /> -->
+    <link rel="icon" href="C:\Users\Jaideep Singh\Desktop\images.png" sizes="16x16" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/screen.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="userCtrl">
+    <div class="mainContainer">
+
+        <div class="background">
+            <div class="mainDiv">
+                <div class="text">
+                    Welcome to MAVERICK
+                </div>
+                <div class="buttonOne">Log in </div>
+                <div class="buttonTwo">Sign up</div>
+            </div>
+        </div>
+        <div class="secondContainer">
+
+            <p style="font-size:3rem;font-size: 2.5rem;
+    font-family: sans-serif;
+    font-weight: bold;">REGISTER YOURSELF</p>
+            <br>
+            <form ng-hide="hideform">
+                <input class="w3-input fName" type="text" ng-model="fName" placeholder="First Name">
+                <br>
+                <input class="w3-input lName" type="text" ng-model="lName" placeholder="Last Name">
+                <br>
+                <input class="w3-input passWord" type="password" ng-model="passw1" placeholder="Password">
+                <br>
+                <input class="w3-input rPassword" type="password" ng-model="passw2" placeholder="Repeat Password">
+                <br>
+                <select class="gender">
+        <option>Male </option>
+        <option>Female</option>
+        <option>Others</option>
+        <br>
+
+            <select>
+            <option ng-repeat="x in gender">{{x}}</option>
+            </select>
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('userCtrl', function($scope) {
+                        $scope.user;
+                        $scope.email;
+                        $scope.gender = ["Female", "Male", "Others"];
+                    });
+                </script>
+
+                <button class="w3-btn w3-yellow ssubmit" ng-disabled="error || incomplete">&#10004; Submit</button>
+            </form>
+        </div>
+        <div class="thirdContainer">
+            <br>
+            <button class="w3-btn w3-yellow w3-ripple" ng-click="editUser('new')"> &#9998; Existing User:</button>
+            <form ng-hide="hideform">
+                <h3 ng-show="edit">Existing user:</h3>
+
+                <input class="w3-input lusername" type="text" ng-model="lName" placeholder="Username">
+                <br>
+                <input class="w3-input lPassword" type="password" ng-model="passw1" placeholder="Password">
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('userCtrl', function($scope) {
+                        $scope.user;
+                        $scope.email;
+
+                    });
+                </script>
+                <br>
+
+
+                <button class="w3-btn w3-yellow w3-ripple lsubmit" ng-disabled="error || incomplete">&#10004; Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="fourthContainer">
+        <div class="enquiryBlock">
+            Enquiry Bot
+        </div>
+        <div class="nearbyBlock">
+            Nearby Bot
+        </div>
+        <div class="newsBlock">
+            News Bot
+        </div>
+    </div>
+    <div class="fifthContainer">
+        <div class="dateBox">
+            <div class="borderLeft">
+            </div>
+            <div class="todayTime">
+                <b>Today,
+      </b>
+            </div>
+            <div class="borderRight">
+            </div>
+        </div>
+        <div class="mainContainerTwo" style="overflow:scroll">
+            <div class="allNews">
+            </div>
+        </div>
+        <div class="firstContainerThree">
+            <input type='text' class='messages' />
+            <div class="sendButton">
+                Send
+            </div>
+            <img src="../images/mic.png" id="mic3" />
+        </div>
+    </div>
+    <div class="mbotContainer">
+        <div class="legend">
+            <div class="dateBox">
+                <div class="borderLeft">
+                </div>
+                <div class="todayTime">
+                    <b>Today,
+      </b>
+                </div>
+                <div class="borderRight">
+                </div>
+            </div>
+            <div class="firstContainer">
+                <input type='text' class='messages' id="ab" />
+                <div class="sendButton">
+                    Send
+                </div>
+                <img src="../images/mic.png" id="mic1" />
+            </div>
+            <div class="bot">
+                <div class="botMessage">welcome </div>
+                <div class="googleSearch">
+                    <script>
+                        (function() {
+                            var cx = '004176094343663486720:i42ftkrijte';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:search></gcse:search>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContainerOne">
+        <div class="dateBox">
+            <div class="borderLeft">
+            </div>
+            <div class="todayTime">
+                <b>Today,
+    </b>
+            </div>
+            <div class="borderRight">
+            </div>
+        </div>
+        <div class="responses">
+
+        </div>
+        <div class=userInput>
+            <input type="text" class="inputBox" id="inputBox">
+            <input type="button" class="consoleClick" value="SEND">
+            <img src="../images/mic.png" id="mic2" />
+        </div>
+        <div class='mapBox'>
+        </div>
+    </div>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script>
+        setTimeout(responsiveVoice.speak("Welcome to Maveric"), 15000);
+    </script>
+    <script src="../scripts/highcharts.js"></script>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/jquery.tmpl.min.js"></script>
+    <script src="../scripts/jslinq.js"></script>
+    <script src="../scripts/moment.min.js"></script>
+    <script src="../scripts/superjson.js"></script>
+    <script src="../scripts/tocca.min.js"></script>
+    <script src="../scripts/transit.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
